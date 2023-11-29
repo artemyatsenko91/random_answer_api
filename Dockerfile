@@ -2,11 +2,11 @@ FROM node:alpine
 
 WORKDIR /app
 
-EXPOSE 5000
+EXPOSE 5010
 
 COPY package*.json ./
 
-RUN npm install --force --production=true
+RUN npm install
 
 COPY . .
 
