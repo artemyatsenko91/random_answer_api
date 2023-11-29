@@ -2,12 +2,12 @@ FROM node:alpine
 
 WORKDIR /app
 
-EXPOSE 5010
-
 COPY package*.json ./
 
-RUN npm run install
+RUN npm install
 
 COPY . .
+
+EXPOSE 5010
 
 CMD ["npm", "start"]
